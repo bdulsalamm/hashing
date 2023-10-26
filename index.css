@@ -1,0 +1,46 @@
+.hashing {
+    margin-left: 2px;
+    display: flex;
+    width: auto;
+    height: auto;
+
+}
+
+.hashing label {
+    margin-right: 3px;
+    margin-right: 3px;
+}
+
+.hashing button {
+    margin-left: 5px;
+    background-color: rgb(248, 203, 0);
+    
+
+}
+.result {
+    margin-top: 5px;
+    display: flex;
+    color: #00FF00;
+    margin-right: auto;
+}
+.result label { 
+    margin-right: 13.6px;
+    margin-left: 3px;
+}
+
+
+h1 {
+    font-family: 'Courier New', monospace;
+}
+body {
+    color: white;
+    background-color: #1A1A1A;
+    font-family: 'Courier New',monospace;
+    max-width: 950px;
+    line-height: 25px;
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
