@@ -1,19 +1,19 @@
+import Sha256 from './sha.js';
+
 window.addEventListener('load', function() {
     document.getElementById('inputText').value = ''; 
     document.getElementById('hashedText').value = '';
 });
 
-async function hashText() {
-    const inputText = document.getElementById('inputText').value;
-    const hashedText = await sha256(inputText);
-    document.getElementById('hashedText').value = hashedText;
-}
+document.addEventListener('DOMContentLoaded', function() {
+    const inputText = document.getElementById('inputText');
+    const hashedText = document.getElementById('hashedText');
+    
+    const hashButton = document.getElementById('hashButton');
 
-async function sha256(input){
-    const encoder = new TextEncoder();
-    const data = encoder.encode(input);
-    const buffer = await crypto.subtle.digest('SHA-256', data);
-    const hashArray = Array.from(new Uint8Array(buffer));
-    const hashHex = hashArray.map(byte => byte.toString(16).padStart(2, '0')).join('');
-    return hashHex;
-}
+    hashButton.addEventListener('click', function() {
+        const textToHash = inputText.value;
+        const hash = Sha256.hash(textToHash);
+        hashedText.value = hash;
+    });
+});
